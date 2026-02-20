@@ -29,6 +29,6 @@ public class ContainsDuplicate {
 
         System.out.println("Contains Duplicate: " + result);
 
-        sc.close();
+        
     }
 }

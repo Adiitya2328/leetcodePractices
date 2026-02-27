@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Main {
+public class rotateArray{
 
     // Rotate Method
     public static void rotate(int[] nums, int k) {

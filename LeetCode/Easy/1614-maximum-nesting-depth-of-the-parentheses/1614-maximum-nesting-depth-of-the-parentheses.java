@@ -1,17 +1,17 @@
 class Solution {
     public int maxDepth(String s) {
-        int res = 0;
-        int max = Integer.MIN_VALUE;
+        
+        int max = 0;
         Stack<Character> st = new Stack<>();
-        for(int i = 0 ; i< s.length() ; i++){
+        for(int i = 0 ; i< s.length() ; i++){//stack implementation 
             if(s.charAt(i) == '('){
-                st.push(s.charAt(i));
-                res++;
+                st.push('(');
+                max = Math.max(st.size() , max);
             }else if(s.charAt(i) == ')'){
                 st.pop();
-                res--;
+                
             }
-            max = Math.max(res, max);
+           
         }
         return max;
     }

@@ -1,7 +1,7 @@
 class Solution {
     public String removeDuplicates(String s) {
         int n = s.length();
-        Deque<Character> st = new ArrayDeque<>();
+        Stack<Character> st = new Stack<>();
         String res = "";
         for(int i = 0 ; i<n ; i++){
             if(st.isEmpty()){

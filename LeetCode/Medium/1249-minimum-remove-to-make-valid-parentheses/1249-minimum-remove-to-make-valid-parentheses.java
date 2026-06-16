@@ -1,7 +1,7 @@
 class Solution {
     public String minRemoveToMakeValid(String s) {
         char[] arr = s.toCharArray();
-        Stack<Integer> st = new Stack<>();
+        Deque<Integer> st = new ArrayDeque<>();
         for(int i =0 ; i< arr.length; i++){
             if(arr[i] == '('){
                 st.push(i);
@@ -17,12 +17,12 @@ class Solution {
             arr[st.pop()] = '!';
         }
 
-        String res = "";
+        StringBuilder res = new StringBuilder();
         for(int i = 0 ; i<arr.length ; i++){
             if(arr[i]!= '!'){
-                res+=arr[i];
+                res.append(arr[i]);
             }
         }
-        return res;
+        return res.toString();
     }
 }

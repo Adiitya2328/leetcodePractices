@@ -1,19 +1,14 @@
 class Solution {
     public int minAddToMakeValid(String s) {
-        Deque<Character> st = new ArrayDeque<>();
-        int count = 0;
-        for(int i = 0 ; i<s.length() ; i++){
-            if(s.charAt(i) == '('){
-                st.push('(');
-            }else {
-                if(!st.isEmpty()){
-                    st.pop();
-                }else{
-                    count++;
-                }
-                
+        Deque <Character> st = new ArrayDeque<>();
+        for(int i = 0 ; i< s.length() ;i++){
+            char c = s.charAt(i);
+            if(c == ')'  && !st.isEmpty() && st.peek()=='('){
+                st.pop();
+            }else{
+                st.push(c);
             }
         }
-        return count+st.size();
+        return st.size();
     }
 }

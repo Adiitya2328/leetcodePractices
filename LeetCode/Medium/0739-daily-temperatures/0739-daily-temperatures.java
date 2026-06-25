@@ -9,7 +9,7 @@ class Solution {
             while(!st.isEmpty() && temperatures[i] > temperatures[st.peek()]){
                 int prevIndex = st.pop();//pop the previous index
 
-                res[prevIndex] = i - prevIndex; // calculate the gap between the temps
+                res[prevIndex] = i-prevIndex; // calculate the gap between the temps
 
             }
             st.push(i); //push the next index of the temperature

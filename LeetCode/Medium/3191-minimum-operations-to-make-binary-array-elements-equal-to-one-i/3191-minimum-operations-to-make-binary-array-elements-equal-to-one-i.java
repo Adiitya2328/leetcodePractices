@@ -1,5 +1,5 @@
 class Solution {
-    public int flip(int m){
+    public int flip(int m){//made a flip function to flip the numbers
         if (m ==0){
             m=1;
         }else{
@@ -13,7 +13,7 @@ class Solution {
         int n = nums.length;
         int count =0;
         while(high<=n){
-            if(nums[low] ==0){
+            if(nums[low] ==0){//checking if nums[0] ==0,then only we can proceed otherwise it will not be possible to make binary array
                 for(int i = low ; i<high;i++){
                 nums[i]=flip(nums[i]);
                 
@@ -25,9 +25,9 @@ class Solution {
         }
         int sum =0;
         for(int i=0;i<n;i++){
-            sum+=nums[i];
+            sum+=nums[i]; 
 
-        }
+        }//checking the sum of array's element is equal to size of array(tells every element is 1 in the array)
         if(sum == n){
             return count;
         }

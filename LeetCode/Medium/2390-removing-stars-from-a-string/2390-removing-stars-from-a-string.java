@@ -2,7 +2,7 @@ class Solution {
     public String removeStars(String s) {
         int n = s.length();
         
-        String res = "";
+       
         Stack<Character> st = new Stack<>();
         for(int i = 0;i<n;i++){
             char ch = s.charAt(i);
@@ -12,9 +12,10 @@ class Solution {
                 st.push(ch);
             }
         }
+        StringBuilder  res  = new StringBuilder();
         while(!st.isEmpty()){
-            res = st.pop() + res;
+            res.append(st.pop());
         }
-        return res;
+        return res.reverse().toString();
     }
 }

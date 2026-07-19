@@ -3,16 +3,16 @@ class Solution {
         HashMap<Integer , Integer> map = new HashMap<>();
         int[] ans = new int[A.length];
         int common =0;
-        for(int i=0;i<A.length;i++){
+        for(int i=0;i<A.length;i++){//directly put every element of A and B in the Map
             map.put(A[i] , map.getOrDefault(A[i],0)+1);
-            if(map.get(A[i])==2){
+            if(map.get(A[i])==2){//whenever the frequency becomes 2 means we have a common element
                 common++;
             }
             map.put(B[i] , map.getOrDefault(B[i],0)+1);
             if(map.get(B[i] )== 2){
                 common++;
             }
-            ans[i]=common;
+            ans[i]=common; //add the common element in the resultant array 
         }
         return ans;
     }

@@ -8,6 +8,7 @@ class Solution {
             if(nums[mid] ==target){
                 return true;
             }
+            //this condition checks if all the numbers at position of low,high,mid are same then decrease high by one and increase low by 1 and then continue to check this thing again until we found different elements 
             if(nums[low] == nums[mid]&&nums[mid]==nums[high]){
                 low =low+  1;
                 high=high-1;

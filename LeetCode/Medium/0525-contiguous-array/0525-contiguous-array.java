@@ -4,7 +4,7 @@ class Solution {
         int zero = 0;
         int one =  0;
         HashMap<Integer , Integer> map = new HashMap<>();
-        int res = 0;
+        int res =0;
         for(int i= 0; i<n;i++){
             if(nums[i] == 0){
                 zero++;
@@ -13,12 +13,10 @@ class Solution {
             }
             int diff = zero - one ;
             if(diff == 0){
-                res = Math.max(res , i+1);
-                
+                res = Math.max(res , i+1);   
             }
-
             if(!map.containsKey(diff)){
-                map.put(diff , i);
+                map.put(diff,i);
             }else{
                 int idx = map.get(diff);
                 int len = i-idx;

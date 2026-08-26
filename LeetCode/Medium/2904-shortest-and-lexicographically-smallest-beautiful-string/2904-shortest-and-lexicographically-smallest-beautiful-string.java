@@ -4,6 +4,7 @@ class Solution {
         int low =0;
         int len = Integer.MAX_VALUE;
         String ans ="";
+        //basic variable size sliding window approach to move 
         for(int high=0;high<s.length();high++){
             char Highch = s.charAt(high);
             if(Highch == '1'){

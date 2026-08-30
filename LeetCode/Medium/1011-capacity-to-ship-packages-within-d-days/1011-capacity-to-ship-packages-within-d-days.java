@@ -1,4 +1,5 @@
 class Solution {
+    //simply created a function to find the days in which the capacity fits 
     public int FindDays(int[] arr, int cap){
         int days =1; 
         int load = 0;
@@ -14,12 +15,12 @@ class Solution {
     public int shipWithinDays(int[] weights, int days) {
         int n = weights.length;
         int low=Integer.MIN_VALUE;
-        int high = 0;
+        int high = 0;//chose a range between max and sum of array 
         for(int i=0;i<n;i++){
             low = Math.max(low,weights[i]);
             high+=weights[i];
         }
-        
+    //applied the simple BS on answers to findout the least capacity    
         while(low<=high){
             int mid=(low+high)/2;
             int noOfDays = FindDays(weights,mid);

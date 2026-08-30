@@ -9,7 +9,7 @@ class Solution {
         return sum;
     }
     public int smallestDivisor(int[] nums, int threshold) {
-        //it is totally clear that the answer would lie between the range 
+        //it is totally clear that the answer would lie between the range of 1 and max of the array
         int low=1;
         int high = Integer.MIN_VALUE;
         for(int i=0;i<nums.length;i++){

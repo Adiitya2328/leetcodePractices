@@ -10,7 +10,7 @@ class Solution {
             if(s.charAt(i) == ' '){
                 if(i<last){
                     ans+= s.substring(i+1,last+1);
-                ans+=" ";
+                    ans+=" ";
                 
                 }
                 last = i-1;

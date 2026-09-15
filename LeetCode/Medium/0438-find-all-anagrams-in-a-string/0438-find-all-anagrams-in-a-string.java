@@ -15,7 +15,7 @@ class Solution {
         for(int high = 0 ; high<s.length() ; high++){
             char ch = s.charAt(high);
             smap.put(ch , smap.getOrDefault(ch , 0) + 1);
-            if(high-low+1 >p.length()){
+            while(high-low+1 >p.length()){
                 char del = s.charAt(low);
                 smap.put(del , smap.get(del) -1);
                 if(smap.get(del) == 0){

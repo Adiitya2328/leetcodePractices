@@ -12,7 +12,6 @@ class Solution {
                 r--;
             }
        }
-
        return area;
     }
 }

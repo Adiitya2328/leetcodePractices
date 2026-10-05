@@ -1,5 +1,13 @@
 class Solution {
-    public double myPow(double x, int n) {
-        return Math.pow(x,n);
+    public double myPow(double x, long n) {
+        if(n==0) return 1.0;
+        if(n<0) return 1/myPow(x,-n);
+        double half = myPow(x,n/2);
+        if(n%2==0){
+            return half*half;
+
+        }else{
+            return x*half*half;
+        }
     }
 }
